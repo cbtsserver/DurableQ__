@@ -21,8 +21,7 @@ a durable PostgreSQL queue where background workers safely process them.
 -   Exponential backoff
 -   Dead Letter Queue (DLQ)
 -   Worker lease / visibility timeout
--   Concurrent workers using `FOR UPDATE SKIP LOCKED`
--   Queue monitoring APIs
+-   Concurrent workers using `FOR UPDATE SKIP LOCKED` (LEASE FEATURE)
 
 ## Architecture
 
