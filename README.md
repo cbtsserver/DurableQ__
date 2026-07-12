@@ -10,7 +10,7 @@ scratch using **Node.js, TypeScript, PostgreSQL and Express.js**.
 Instead of executing heavy tasks synchronously, DurableQ stores jobs in
 a durable PostgreSQL queue where background workers safely process them.
 
-## ✨Features
+## Features
 
 -   Durable PostgreSQL-backed queue
 -   Priority scheduling
@@ -22,7 +22,7 @@ a durable PostgreSQL queue where background workers safely process them.
 -   Concurrent workers using `FOR UPDATE SKIP LOCKED`
 -   Queue monitoring APIs
 
-## 🏗 Architecture
+## Architecture
 
 ``` text
                 Client
@@ -51,7 +51,7 @@ a durable PostgreSQL queue where background workers safely process them.
                    Requeue     DLQ
 ```
 
-## ⚙Tech Stack
+## Tech Stack
 
 -   Node.js
 -   TypeScript
@@ -59,7 +59,7 @@ a durable PostgreSQL queue where background workers safely process them.
 -   PostgreSQL
 -   pg
 
-## 📂Folder Structure
+## Folder Structure
 
 ``` text
 src/
@@ -70,7 +70,7 @@ src/
 └── index.ts
 ```
 
-## 🗄Database
+## Database
 
 ### jobs
 
@@ -91,7 +91,7 @@ src/
 
 Stores permanently failed jobs for debugging and replay.
 
-## 🔄Job Lifecycle
+## Job Lifecycle
 
 ``` text
 Enqueue
@@ -114,7 +114,7 @@ Done    Retry→Backoff
      Requeue  DLQ
 ```
 
-## 🔐Reliability
+## Reliability
 
 -   Crash-safe durable storage
 -   Atomic job claiming
@@ -122,7 +122,7 @@ Done    Retry→Backoff
 -   Worker recovery using lease expiration
 -   Fault-tolerant retry mechanism
 
-## 🚀 Getting Started
+## Getting Started
 
 ``` bash
 git clone <repository-url>
@@ -131,7 +131,7 @@ npm install
 npm run init-db
 npm run dev
 ```
-## 👨‍💻 Author
+## Author
 
 **Ayush Kumar Singh**
 
