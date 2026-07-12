@@ -1,6 +1,8 @@
 # DurableQ
 
 > **A Production-Inspired Distributed Job Queue System**
+> 
+> Modern applications should respond quickly to users. Heavy tasks such as sending emails, generating invoices, processing images, or sending notifications should not block the user's request. Instead, these tasks are pushed into a background queue where workers process them asynchronously. To understand how systems like Amazon SQS, RabbitMQ, or BullMQ work internally, I built DurableQ from scratch using Node.js, TypeScript, PostgreSQL, and Express. Jobs are stored durably in PostgreSQL, workers claim them safely using PostgreSQL row-level locking, failed jobs are retried with exponential backoff, and permanently failed jobs are moved to a Dead Letter Queue. This makes the system reliable, fault-tolerant, and safe for concurrent processing.
 
 ## 📖 Overview
 
